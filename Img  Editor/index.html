@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Editor</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/icons.css">
+</head>
+<body>
+	<input type="file" name="" id="img_file" class="files" style="position: fixed;top: -100px;">
+	<header>
+		<h3>ImgEd</h3>
+		<h4>File.png</h4>
+	</header>
+	
+	<section class="pages page1">
+		<div class="template-page">
+			<div class="templates" val="1">
+				<i class="fas fa-times-circle"></i>
+			</div>
+			<div class="templates" val="2">
+				<i class="fas fa-times-circle"></i>
+			</div>
+			<div class="templates" val="3">
+				<i class="fas fa-times-circle"></i>
+			</div>
+			<div class="templates" val="4">
+				<i class="fas fa-times-circle"></i>
+			</div>
+			<div class="templates" val="5">
+				<i class="fas fa-times-circle"></i>
+			</div>
+			<div class="templates" val="6">
+				<i class="fas fa-times-circle"></i>
+			</div>
+		</div>
+	</section>
+
+	<section class="pages page2">
+		<main>
+			<div class="editor">
+				<div class="shapes-box">
+					<div class="patterns" pattern-type="cir">
+						<i class="far fa-circle"></i>
+					</div>
+					<div class="patterns" pattern-type="tri">
+						<i class="fas fa-caret-up"></i>
+					</div>
+					<div class="patterns" pattern-type="rect">
+						<i class="fas fa-retweet"></i>
+					</div>
+					<div class="patterns" pattern-type="tri">
+						<i class="fas fa-caret-up"></i>
+					</div>
+					<div class="patterns" pattern-type="cir">
+						<i class="far fa-circle"></i>
+					</div>
+				</div>
+				<div class="crop-option">
+					<div class="tick"><i class="fas fa-check-circle"></i></div><div class="cross"><i class="fas fa-times-circle"></i></div>
+				</div>
+				<ul class="nav">
+					<li class="sub-list template" status="off">
+						<i class="fas fa-torah"></i>
+						<span>Template</span>
+					</li>
+					<li class="sub-list crop" status="off">
+						<i class="fas fa-crop"></i>
+						<span>Crop</span>
+					</li>
+					<li class="sub-list pen" status="off">
+						<i class="fas fa-pen"></i>
+						<span>Pen</span>
+					</li>
+					<li class="sub-list text" status="off">
+						<i class="fas fa-font"></i>
+						<span>Text</span>
+					</li>
+					<li class="sub-list shapes" status="off">
+						<i class="fas fa-shapes"></i>
+						<span>Shapes</span>
+					</li>
+					<li class="sub-list effects" status="off">
+						<i class="fas fa-air-freshener"></i>
+						<span>Effects</span>
+					</li>
+					<li class="sub-list download" status="off">
+						<i class="fas fa-file-export"></i>
+						<span>Download</span>
+					</li>
+				</ul>
+				<ul class="effects-div">
+					<li class="sub-effect template" val="20">
+						<i class="fas fa-sun"></i>
+						<span>Brightness</span>
+					</li>
+					<li class="sub-effect crop" val="30">
+						<i class="fas fa-quidditch"></i>
+						<span>Crop</span>
+					</li>
+					<li class="sub-effect pen" val="10">
+						<i class="fas fa-pen"></i>
+						<span>Pen</span>
+					</li>
+					<li class="sub-effect text" val="80">
+						<i class="fas fa-quidditch"></i>
+						<span>Text</span>
+					</li>
+					<li class="sub-effect effect" val="30">
+						<i class="fas fa-air-freshener"></i>
+						<span>Effects</span>
+					</li>
+					<li class="sub-effect download" val="40">
+						<i class="fas fa-quidditch"></i>
+						<span>Download</span>
+					</li>
+					<li class="sub-effect text" val="80">
+						<i class="fas fa-quidditch"></i>
+						<span>Text</span>
+					</li>
+					<li class="sub-effect effect" val="30">
+						<i class="fas fa-air-freshener"></i>
+						<span>Effects</span>
+					</li>
+				</ul>
+				<div class="right-div">
+					<div class="first">
+						<form class="input-div">
+							<input type="url" name="" placeholder="Enter url here">
+							<label for="canvas_img" class="filetype"><i class="fas fa-folder-open"></i></label>
+							<input type="submit" name="" value="Search">
+							<input type="file" id="canvas_img" style='position: fixed;top: -1000px;'>
+						</form>
+					</div>
+					<div class="second">
+						<label for="canvas_img" class="filetype" style="display: none">Click to add Img&nbsp;&nbsp;<i class="fas fa-folder-open"></i></label>
+						<canvas id="canvas"></canvas>
+					</div>
+					<div class="third">
+						<div>&nbsp;<input type="range" class="effect_range" name=""></div>
+						<div class="reset">Delete&nbsp;<i class="fas fa-trash-restore"></i></div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</section>
+	<style type="text/css">
+		.colorbox {
+		  width: 70px; 
+		  height: 35px; 
+		  border: 1px solid black;
+		  position: fixed;
+		  top: 50%;
+		}
+	</style>
+
+	<input type="color" name="" class="colorbox">
+
+	<script src="./js/fabric.js"></script>
+	<script src="./js/app.js"></script>
+	<script src="./js/icons.js"></script>
+</body>
+</html>

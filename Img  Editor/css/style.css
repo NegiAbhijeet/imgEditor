@@ -1,0 +1,260 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background: #202020;
+}
+header{
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 5%;
+	color: white;
+	background: rgba(255, 255, 255, 0.1);
+}
+/*Pages*/
+.pages{
+	min-height: calc(100vh - 60px);
+	width: 100%;
+	display: none;
+}
+.page1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.template-page{
+	width: 50%;
+	font-size: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.templates{
+	width: 25%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	cursor: pointer;
+	background: grey;
+	margin: 10px;
+	border-radius: 20px;
+	box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.templates:hover{
+	background: rgba(255, 255, 255, 0.5);
+}
+
+/*Input and select img section*/
+form{
+	width: 100%;
+	display: flex;
+}
+input[type=url]{
+	flex: 7;
+	padding: 5px;
+}
+.first .filetype{
+	flex: 1;
+	padding: 6px;
+	background: white;
+	color: black;
+	outline: none;
+	border: none;
+}
+input[type=submit]{
+	flex: 2;
+	padding: 5px;
+}
+
+/*main Editor*/
+main{
+	width: 100%;
+	height: calc(100vh - 60px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.editor{
+	width: 50%;
+	height: 90%;
+	display: flex;
+	background: #303030;
+	border-radius: 20px;
+	position: relative;
+}
+.editor .right-div{
+	width: 100%;
+	height: 100%;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 5px;
+}
+.first{
+	height: 8%;
+	width: 100%;
+	padding: 5px 0;
+}
+.second{
+	width: 100%;
+	height: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.filetype{
+	width: 90%;
+	height: 70%;
+	border: 2px dotted white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.third{
+	width: 100%;
+	height: 12%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 8px;
+}
+.effect_range{
+	display: none;
+}
+
+/*main section's left side buttons*/
+.editor .nav,.effects-div{
+	width: 80px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.effects-div{
+	display: none;
+	min-width: 80px;
+	border-radius: 0;
+}
+.effects-div li{width: 80px;}
+.editor ul li{
+	width: 100%;
+	height: 100%;
+	border: 1px solid black;
+	list-style: none;
+	background: #404040;
+}
+
+.editor .nav li:nth-child(1){
+	border-top-left-radius: 20px;
+}
+.editor .nav li:nth-last-child(1){
+	border-bottom-left-radius: 20px;
+}
+.effects-div li:nth-child(1){
+	border-top-left-radius: 0px;
+}
+.effects-div li:nth-last-child(1){
+	border-bottom-left-radius: 0px;
+}
+.editor ul li{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: white;
+	cursor: pointer;
+	flex: 1;
+}
+.editor ul li span{
+	opacity: 0;
+	transition: 0.6s;
+}
+.editor ul li:hover span{
+	opacity: 1;
+}
+.editor ul li svg{
+	color: orange;
+	font-size: 25px;
+}
+.editor ul li[status=on]{
+	background: #707070;
+}
+/*main section's left side buttons*/
+
+/*Reset button*/
+.reset{
+	background: #707070;
+	border-radius: 15px;
+	padding: 5px 10px;
+	width: 100px;
+	text-align: center;
+	cursor: pointer;
+}
+.reset:hover{
+	color: orange;
+}
+/*Reset button*/
+
+/*crop yes no button*/
+.crop-option{
+	position: absolute;
+	top: 30px;
+	right: -60px;
+	width: 50px;
+	color: white;
+	display: none;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 20px;
+}
+.crop-option svg{
+	cursor: pointer;
+}
+/*crop yes no button*/
+
+
+
+.shapes-box{
+	position: absolute;
+	top: 0;
+	left: 50px;
+	width: 80px;
+	height: 100%;
+	background: grey;
+	z-index: -1;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.shapes-box.on{
+	left: -80px;
+	z-index: 1;
+	cursor: pointer;
+}
+.patterns{
+	flex: 1;
+	width: 100%;
+	border:  1.5px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.patterns svg{
+	font-size: 40px;
+	color: orange;
+}
